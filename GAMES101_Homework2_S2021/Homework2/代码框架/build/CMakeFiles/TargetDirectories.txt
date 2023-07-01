@@ -1,0 +1,3 @@
+/media/shared/GAMES101_Homework2_S2021/Homework2/代码框架/build/CMakeFiles/rebuild_cache.dir
+/media/shared/GAMES101_Homework2_S2021/Homework2/代码框架/build/CMakeFiles/Rasterizer.dir
+/media/shared/GAMES101_Homework2_S2021/Homework2/代码框架/build/CMakeFiles/edit_cache.dir
