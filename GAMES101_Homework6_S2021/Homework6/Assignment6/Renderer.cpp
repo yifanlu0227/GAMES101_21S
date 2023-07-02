@@ -5,6 +5,7 @@
 #include <fstream>
 #include "Scene.hpp"
 #include "Renderer.hpp"
+#include "Ray.hpp"
 
 
 inline float deg2rad(const float& deg) { return deg * M_PI / 180.0; }
@@ -35,6 +36,12 @@ void Renderer::Render(const Scene& scene)
             // *scale*, and x (horizontal) variable with the *imageAspectRatio*
 
             // Don't forget to normalize this direction!
+            
+            Vector3f dir = Vector3f(x, y, -1); // Don't forget to normalize this direction!
+            dir = normalize(dir);
+            Ray ray(eye_pos, dir, 0);
+            
+            framebuffer[m++] = scene.castRay(ray, 0); // 0 refers to recursive depth, or bounce time.
 
         }
         UpdateProgress(j / (float)scene.height);
